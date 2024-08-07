@@ -1,9 +1,15 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
+
+# Obtén el contenido del secreto desde la variable de entorno
+creds_json = os.getenv('GOOGLE_CREDENTIALS_SERENAZGO_JSON')
+
+# Convierte el contenido JSON en un diccionario de Python
+creds_dict = json.loads(creds_json)
 # Configurar credenciales
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = Credentials.from_service_account_file('serenazgo-431820-eb068e283b9e.json', scopes=scope)
+creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
 client = gspread.authorize(creds)
 
 def update_citizen_sheet(nombres, apellidos, dni, celular, tipo, subtipo, modalidad, lat, lon):
