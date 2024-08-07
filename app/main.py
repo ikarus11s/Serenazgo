@@ -1,5 +1,9 @@
+import sys
+import os
+# Añadir la ruta del directorio que contiene config.py
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
-from config import *
+from config import GOOGLE_SHEETS_CREDENTIALS, SPREADSHEET_ID
 from google_sheets_handler import get_serenos_data, get_ciudadanos_data
 from map_utils import create_map, add_sereno_markers, add_ciudadano_markers, display_map
 from simulation_controller import simulation_controller
