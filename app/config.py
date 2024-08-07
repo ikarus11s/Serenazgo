@@ -17,6 +17,15 @@ st.set_page_config(
 creds_json = os.getenv('GOOGLE_CREDENTIALS_SERENAZGO_JSON')
 
 # Verifica si se recuperaron las credenciales correctamente
+
+#creds_json = os.getenv('GOOGLE_CREDENTIALS_SERENAZGO_JSON')
+
+# Convierte el contenido JSON en un diccionario de Python
+creds_dict = json.loads(creds_json)
+
+GOOGLE_SHEETS_CREDENTIALS = creds_dict
+
+
 if creds_json is None:
     st.error("No se pudo encontrar la clave de credenciales de Google. Asegúrate de haber configurado el secreto en GitHub.")
 else:
