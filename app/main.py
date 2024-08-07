@@ -1,5 +1,5 @@
 import streamlit as st
-from config import GOOGLE_SHEETS_CREDENTIALS, SPREADSHEET_ID
+from config import creds, client, SPREADSHEET_ID, PUEBLO_LIBRE_CENTER, DEFAULT_ZOOM
 from utils.google_sheets_handler import get_serenos_data, get_ciudadanos_data
 from utils.map_utils import create_map, add_sereno_markers, add_ciudadano_markers, display_map
 from utils.simulation_controller import simulation_controller
