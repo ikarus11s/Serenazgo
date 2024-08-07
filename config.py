@@ -10,21 +10,23 @@ st.set_page_config(
 
 # Credenciales para Google Sheets (deberías usar variables de entorno en producción)
 GOOGLE_SHEETS_CREDENTIALS = {
-    "type": "service_account",
-    "project_id": "tu-proyecto-id",
-    "private_key_id": "tu-private-key-id",
-    "private_key": "-----BEGIN PRIVATE KEY-----\ntu-private-key\n-----END PRIVATE KEY-----\n",
-    "client_email": "tu-client-email@tu-proyecto.iam.gserviceaccount.com",
-    "client_id": "tu-client-id",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tu-client-email%40tu-proyecto.iam.gserviceaccount.com"
+  "type": "service_account",
+  "project_id": "serenazgo-431820",
+  "private_key_id": "eb068e283b9ebcfa07e4879a556240e56e67dea9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyCre7NE+KIlr4\ndUvb4alpj15bliZuX7awqlKol9+2uWCkX4YNea9F1EFywnqlDiOtz4P0el/MVHq8\n4uvC7uNAXYu9yNeW9HZgKZ47LP1OA1Q9Lgs+gbiwXhjJY9qe+u3Tm0IbUurDfpOI\nRXyjQxuk2ZUoKxjQrBb2EooPUudk2AZM9++JRjNll31wQqUCoSHQoULmDezx8q0j\nYO9RRWi5XnRUtY+cYgZUaBUjeUwu7p+VH8OpSTOgXKxT5fvwRmAQb/iw2aUfAIFO\nM0ezP5s6kn7oc+XwtS7XpSrV2zzTehG6vd27qpKpytNdIY/oq7ogtnnT1roB7WHK\n6futVsGlAgMBAAECggEAB4ZD7xW+IdKjYRpF9zhBimxMetbs71+8rxk3rpfilMyf\nXLsLxZCFu5AFpxW4jLa9A8jAJSox18cfO9HkUGP7tzns4Lu2/tJ8mUJRBWO4nd4u\npnpGb+EYHt4PMp21fOASgo2ufMyjjtkP36O+KYE5zx0B/IVbwl/vhX1Rl+WzUVPs\nuP2kySFW2uty1POc64Vbv3ME+fRNvpHrWnp9Upz/q3uXPc2fr02sUXc3Ni/swZuU\neqyuX+TOXgTI3HWnyFU/Y3J7/xovozIforwDKyCjTR06rztvKN3v9VA+f5J4jJIr\nR7/3fp2Lm6vKCc4Q8uNn5I01jsDhnzclUsF/1F67WQKBgQDyg3A1O0fsrmigMimY\nBSRG0L3MQrFMkJJC9gsIJJDU/uq1ExbVjJCrUD+mai9wiaGvIV4Z/FPFrWJxDmGH\nk5jki24zpdTR3xL6zSF0gp0vzjH5XoTcHQKUyAZlFtc5P/G1aGUhRJz48fiH/XxE\nXjxjoephrqC4EgwmesFhskNx+QKBgQC78WzCe3SzJ6OHu83H3Y0wsoCYrUWYARlA\nwY6UR/b7njze8g2AdpwhHvVrYdzqLUalbI4zD8UK+dN+GM3je8y5umU0ECef/Jf6\nAUaEc8cM6ptHFbIXu4Td1UetYq8P7z8UZdNvBtHfNAem2Dr1FFOVcS2McfoyFSY/\ngSlPVbe4DQKBgQCqzLGhfA/q/OcJNGsg+zYSff++tZYDk6q/aGRaps4uhR8uyrQB\nUQ+u6ET74rtoqjZqjrik2pbxmWzErVk5UFWVWTITRA9AhLjsVL7kPP2R5spBlDVE\nhVYFDV+boNuSIZwNpOnc5WMc3eapeHkl+azUivv1MjVVjrhp/XjnYtKnmQKBgEPe\nMLoiPsgbPlBbnznXZY76RrnbiFAVxXq+6q/dNPEz+SNBIWMMceD7/v/h/RaLdwFx\nrAAAZ9VI1fipGGBXalx/VOByHP0HCBJ9t2tJK84cQipvSTqMurQoupOAGVuVt5+0\nDaAARHVnooO7fb7WskA6+InI9uJzBLbV+4bsm0VZAoGBAL6Mta0p8qkw6SzvQ5AP\n5x2qpXOVU4/cuzgu2am3bsHC/l+a8NitImK9ChMrp9mg4VXkKo9dZhnzL8yvy6bs\nZvX5+4rnTULJsFYzWsvqcuMvlcoJTmoFXSZL/pZlwIBHsh7WB3jsyoRlhmhrNEi3\nZaTAOeUpZ5mq8gX14s9KprcZ\n-----END PRIVATE KEY-----\n",
+  "client_email": "serenazgo@serenazgo-431820.iam.gserviceaccount.com",
+  "client_id": "107827324229139530746",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/serenazgo%40serenazgo-431820.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
 }
 
 # ID de la hoja de cálculo de Google
-SPREADSHEET_ID = 'tu-spreadsheet-id'
+SPREADSHEET_ID = '1xJO4wKH5evRY86wlLx8pj8ibXDtN91NFEetPCQQeU1c'
 
 # Configuración del mapa
 PUEBLO_LIBRE_CENTER = [-12.0789, -77.0842]
 DEFAULT_ZOOM = 14
+
