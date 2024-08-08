@@ -54,6 +54,8 @@ def update_sereno_status(dni, new_status):
     sheet.update_cell(sereno.row, 13, new_status)  # Asumiendo que el estado está en la columna 13import gspread
 from google.oauth2.service_account import Credentials
 
+# Convertir el JSON en un diccionario de Python
+creds_dict = st.secrets["gcp_service_account"]
 # Configurar credenciales
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = Credentials.from_service_account_file('path/to/service_account.json', scopes=scope)
