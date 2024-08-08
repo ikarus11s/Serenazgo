@@ -58,7 +58,7 @@ from google.oauth2.service_account import Credentials
 creds_dict = st.secrets["gcp_service_account"]
 # Configurar credenciales
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = Credentials.from_service_account_file('path/to/service_account.json', scopes=scope)
+creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
 client = gspread.authorize(creds)
 
 def update_citizen_sheet(nombres, apellidos, dni, celular, tipo, subtipo, modalidad, lat, lon):
