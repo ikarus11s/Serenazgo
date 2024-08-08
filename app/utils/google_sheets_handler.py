@@ -1,9 +1,9 @@
 import gspread
 from google.oauth2.service_account import Credentials
-from config import GOOGLE_SHEETS_CREDENTIALS, SPREADSHEET_ID
+from config import GOOGLE_CREDENTIALS_SERENAZGO_JSON, SPREADSHEET_ID
 
 def get_google_sheet():
-    creds = Credentials.from_service_account_info(GOOGLE_SHEETS_CREDENTIALS, scopes=['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'])
+    creds = Credentials.from_service_account_info(GOOGLE_CREDENTIALS_SERENAZGO_JSON, scopes=['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'])
     client = gspread.authorize(creds)
     return client.open_by_key(SPREADSHEET_ID)
 
