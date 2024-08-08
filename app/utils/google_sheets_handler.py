@@ -1,4 +1,6 @@
 import gspread
+import os
+import json
 from google.oauth2.service_account import Credentials
 from config import GOOGLE_CREDENTIALS_SERENAZGO_JSON, SPREADSHEET_ID
 
