@@ -9,9 +9,6 @@ import streamlit as st
 # Convertir el JSON en un diccionario de Python
 creds_dict = st.secrets["gcp_service_account"]
 
-
-# Convierte el contenido JSON en un diccionario de Python
-creds_dict = json.loads(creds_json)
 # Configurar credenciales
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
