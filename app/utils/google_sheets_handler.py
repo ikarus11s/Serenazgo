@@ -7,8 +7,7 @@ import streamlit as st
 
 
 # Obtener las credenciales de Google Sheets desde los secretos
-creds_json = st.secrets["google"]["creds"]
-
+creds_json = st.secrets["private_key"]
 # Convertir el JSON en un diccionario de Python
 creds_dict = json.loads(creds_json)
 
