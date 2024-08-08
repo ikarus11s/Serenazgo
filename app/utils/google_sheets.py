@@ -2,10 +2,13 @@ import os
 import json
 import gspread
 from google.oauth2.service_account import Credentials
+from config import SPREADSHEET_ID
+import streamlit as st
 
 
-# Obtén el contenido del secreto desde la variable de entorno
-creds_json = os.getenv('GOOGLE_CREDENTIALS_SERENAZGO_JSON')
+# Convertir el JSON en un diccionario de Python
+creds_dict = st.secrets["gcp_service_account"]
+
 
 # Convierte el contenido JSON en un diccionario de Python
 creds_dict = json.loads(creds_json)
