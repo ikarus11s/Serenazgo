@@ -54,10 +54,14 @@ def update_sereno_status(dni, new_status):
     sheet.update_cell(sereno.row, 13, new_status)  # Asumiendo que el estado está en la columna 13
 
 
-def update_sereno_location(sereno['id'], new_location):
+def update_sereno_location(sereno_id, new_location):
+    pass
 
 def get_serenos_motorizado():
+    pass
 
 def get_serenos_automovil():
+    pass
 
 def get_serenos_a_pie():
+    pass
