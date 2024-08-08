@@ -6,10 +6,8 @@ from config import SPREADSHEET_ID
 import streamlit as st
 
 
-# Obtener las credenciales de Google Sheets desde los secretos
-creds_json = st.secrets["private_key"]
 # Convertir el JSON en un diccionario de Python
-creds_dict = json.loads(creds_json)
+creds_dict = st.secrets["gcp_service_account"]
 
 
 
