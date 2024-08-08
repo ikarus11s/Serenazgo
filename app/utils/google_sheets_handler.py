@@ -7,7 +7,7 @@ import streamlit as st
 
 
 # Convertir el JSON en un diccionario de Python
-creds_dict = st.secrets["gcp_service_account"]
+creds_dict = st.secrets["private_key"]
 
 
 
