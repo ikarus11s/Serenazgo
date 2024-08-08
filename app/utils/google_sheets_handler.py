@@ -13,6 +13,7 @@ creds_dict = st.secrets["gcp_service_account"]
 
 
 def get_google_sheet():
+    SPREADSHEET_ID = '1xJO4wKH5evRY86wlLx8pj8ibXDtN91NFEetPCQQeU1c'
     creds = Credentials.from_service_account_info(creds_dict, scopes=['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'])
     client = gspread.authorize(creds)
     return client.open_by_key(SPREADSHEET_ID)
