@@ -2,14 +2,29 @@ import gspread
 import os
 import json
 from google.oauth2.service_account import Credentials
-from config import  SPREADSHEET_ID
+from config import SPREADSHEET_ID
+import streamlit as st
 
-
-# Obtén el contenido del secreto desde la variable de entorno
+# Intenta obtener las credenciales de la variable de entorno
 creds_json = os.getenv('GOOGLE_CREDENTIALS_SERENAZGO_JSON')
 
+# Si no está en la variable de entorno, intenta obtenerlo de los secretos de Streamlit
+if not creds_json:
+    try:
+        creds_json = st.secrets["GOOGLE_CREDENTIALS_SERENAZGO_JSON"]
+    except KeyError:
+        st.error("No se encontraron las credenciales de Google. Por favor, configura GOOGLE_CREDENTIALS_SERENAZGO_JSON en los secretos de Streamlit.")
+        st.stop()
+
 # Convierte el contenido JSON en un diccionario de Python
-creds_dict = json.loads(creds_json)
+try:
+    creds_dict = json.loads(creds_json)
+except json.JSONDecodeError:
+    st.error("El formato de las credenciales de Google no es válido. Asegúrate de que sea un JSON válido.")
+    st.stop()
+except TypeError:
+    st.error("Las credenciales de Google no están definidas o son nulas.")
+    st.stop()
 
 def get_google_sheet():
     creds = Credentials.from_service_account_info(creds_dict, scopes=['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive'])
